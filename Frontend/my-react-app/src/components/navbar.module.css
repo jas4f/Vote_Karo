@@ -1,0 +1,117 @@
+.topbar_home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.item_navbar{
+    padding: 12px;
+    border-radius: 22px 22px 0px 0px;
+    margin-top: 8px;
+   
+}
+.home_btn{
+    padding: 13px;
+    /* height: 42px; */
+     cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    background: repeating-linear-gradient(35deg, red, transparent 119px);
+    color: white;
+}
+.home_btn:hover{
+    background: repeating-linear-gradient(170deg, red, transparent 119px);
+}
+.home_btn3{
+    padding: 13px;
+    display: block;
+    text-align: center;
+    color: white;
+    background: brown;
+    margin: auto;
+    border-radius: 12px;
+    border: 1px solid brown;
+     cursor: pointer;
+}
+
+.home_btn3:active,.home_btn3:hover,.home_btn2:hover,.home_btn2:active,.home_btn:hover,.home_btn:active,.active{
+    background: transparent !important;
+    color: #6a1111 !important;
+    border: 1px solid #6a1111 !important;
+}
+.home_btn2{
+    padding: 13px;
+    /* height: 42px; */
+     cursor: pointer; 
+    border: none;
+    background: repeating-linear-gradient(35deg, blue, transparent 119px);
+    border-radius: 12px;
+    color: white;
+}
+
+.home_btn2:hover{
+       background: repeating-linear-gradient(170deg, blue, transparent 119px); 
+}
+
+
+.profile_link{
+    text-decoration: none;
+    color: white;
+}
+.container_navbar{
+   box-shadow: 1px 1px 7px 1px #8080807a;
+   
+}
+.announcement_bar {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: -50px; /* Start off-screen */
+    width: 100%;
+    z-index: 1000;
+    animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        top: -50px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+.announcement_bar_text{
+    left: 80%;
+     animation: slideLeft 0.5s forwards;
+    text-shadow: 5px 1px 5px #ff00004d;
+    text-shadow: 5px 1px 5px #ff00004d;
+    font-size: 23px;
+    text-align: center;
+    background: #6a1111;
+    font-weight: bold;
+    color: white;
+    padding: 15px;
+    margin: 0px;
+}
+
+@keyframes slideLeft{
+    0%{
+         left: 80%;
+    }
+    25%{
+        left: 60%;
+    }
+    50%{
+        left: 40%;
+    }
+    75%{
+        left: 20%;
+    }
+    100%{
+       left: 0%;
+    }
+}
+

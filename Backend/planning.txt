@@ -1,0 +1,32 @@
+votting app functionality
+
+1. user sign up / sign in 
+2. see the list of candidates
+3 votes one of the candidates , after voting , user can't vote
+again.
+4. their is a route which shows the list of candidates and their live voting counts
+5. user data must contains their one unique goverment id proof named : adhaar card number
+6. there is one admin who can only maintain the table od candidates and he can't able to vote at all
+7. user can login only with addhar card anf paasword.
+
+routes
+
+user authenication
+/sign up : POST 
+/login in : POST
+
+voting:
+/candidates : GET 
+/vote/:candidateID : POST
+
+vote counts:
+/vote/counts : GET
+
+User profile :
+ /profile : GET
+ /profile/paasword : PUT
+
+ admin candidate management
+ /candidates : POST
+ /candidates/:candidateID: PUT
+ /candidates/:candidateID: DEL

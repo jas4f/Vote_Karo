@@ -1,0 +1,131 @@
+.container{
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.candidates_list{
+    border: 2px solid black;
+    width: 31%;
+    text-align:center;
+    background-color: rgb(214 211 211 / 15%);
+}
+
+@media only screen and (max-width: 720px) {
+ .candidates_list{
+    border: 2px solid black;
+    width: 100%;
+    text-align:center;
+}
+
+ 
+.add_candidate_button{
+    width: 100% !important;
+}
+
+.dialog_box{
+    margin: 15px !important;
+}
+}
+.vote_button{
+   color: white;
+    background-color:green;
+    padding: 10px;
+    border: 2px solid green;
+    border-radius: 39px;
+    font-size: 18px;
+    margin: 13px;
+    font-weight: bold;
+    animation: color;
+    animation-duration: 2s ease-in-out;
+    cursor: pointer;
+}
+
+.operate_button{
+  color: white;
+    background-color: red;
+    padding: 10px;
+    /* border: 2px solid green; */
+    border-radius: 39px;
+    font-size: 18px;
+    margin: 13px;
+    font-weight: bold;
+    animation: home_color__q3rGj;
+    animation-duration: 2s ease-in-out;
+    cursor: pointer;
+    border: none;
+    border: 2px solid;
+}
+
+
+.vote_button:hover,.operate_button:hover{
+    background-color: transparent;
+    border: 2px solid green;
+    color: green;
+}
+
+.topbar_home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.home_btn{
+    padding: 10px 22px;
+    /* height: 42px; */
+    height: 100%;
+    border: none;
+    margin-top: 23px;
+    background: repeating-linear-gradient(35deg, red, transparent 119px);
+    border-radius: 11px;
+    color: white;
+}
+.home_btn:hover{
+    background: repeating-linear-gradient(170deg, red, transparent 119px);
+}
+.home_btn2{
+    padding: 10px 22px;
+    /* height: 42px; */
+    height: 100%;
+    border: none;
+    margin-top: 23px;
+    background: repeating-linear-gradient(35deg, blue, transparent 119px);
+    border-radius: 11px;
+    color: white;
+}
+
+.home_btn2:hover{
+       background: repeating-linear-gradient(170deg, blue, transparent 119px); 
+}
+
+.variousOperation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Add_candidate{
+     border: 2px solid black;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+     
+    /* height: 58%; */
+    padding: 47px 8px;
+}
+
+.add_canidate_logo{
+    margin: auto;
+    font-size: 31px;
+}
+
+.add_candidate_button{
+    width: 31%;
+    text-decoration: none;
+    color: black;
+}
+

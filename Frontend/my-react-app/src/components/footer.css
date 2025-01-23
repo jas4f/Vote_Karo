@@ -1,0 +1,11 @@
+.footer_sub_container{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer_container{
+       background-color: rgb(194 192 192 / 17%);
+    box-shadow: 1px 0px 6px 1px gray;
+}
