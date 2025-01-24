@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import style from './profile.module.css';
-
+import Image from './Images/vote_image.jpg'
 const Votecenter = () => {
    const[res,setRes] = useState('');
     useEffect(()=>{
@@ -26,6 +26,7 @@ const Votecenter = () => {
         },[])
 
   return(
+   <div>
     <div className={style.container}>
       <div className={style.sub_container}>
            {res && <div className={style.profile_items}>
@@ -37,11 +38,10 @@ const Votecenter = () => {
            </div>}
       </div>
         <div className={style.sub_container}>
-           <img src='../image1.jpg' alt="no pic" />
+           <img  className = {style.Image_profile} src={Image} alt="no pic" />
       </div>
-      
-        
     </div>
+   </div>
   )
 };
 

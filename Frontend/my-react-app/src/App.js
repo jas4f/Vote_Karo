@@ -9,8 +9,7 @@ import VoteSuccessfully from './components/VoteStatus';
 import ManageCandiate from './components/UpdateCandidate';
 import AddCandidate from './components/AddCandidate';
 import Result from './components/LiveResult';
-import Footer from './components/footer';
-function Layout({ children }) {
+ function Layout({ children }) {
   const location = useLocation();
   const noNavbarRoutes = ['/login', '/signup'];
   const shouldShowNavbar = !noNavbarRoutes.includes(location.pathname);
@@ -19,7 +18,6 @@ function Layout({ children }) {
     <div>
       {shouldShowNavbar && <Navbar />}
       {children}
-      {shouldShowNavbar && <Footer />}
     </div>
   );
 }

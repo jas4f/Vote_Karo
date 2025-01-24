@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-
+import style from './VoteStatus.module.css'
  
  const VoteSuccessfully = () => {
 
@@ -36,10 +36,15 @@ useEffect(()=>{
 },[param_data.id]);
 
   return(
-    <>   
-    
-       <h4>{result}</h4>
-       <h2>thanks for Voting 😊</h2>
+    <>  
+    <div className={style.container_result}>
+              <div className={style.result}>
+                  <h2>thanks for Voting 😊</h2>
+                  <h3>Happy voting ❤️</h3>
+              </div>
+    </div> 
+
+      
     </>
   )
 };
