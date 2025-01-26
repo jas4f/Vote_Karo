@@ -3,6 +3,7 @@
     gap: 10px;
     margin: 20px;
     flex-wrap: wrap;
+    height: 78vh;
 }
 
 .candidates_list{
@@ -129,3 +130,8 @@
     color: black;
 }
 
+.data_not_present{
+    margin: auto;
+    display: block;
+
+}
