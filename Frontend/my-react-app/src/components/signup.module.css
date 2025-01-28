@@ -28,7 +28,7 @@
     text-align: center;
 }
 .container_loginSignup{
-      width: 100vw;
+  width: 100vw;
   height: 100vh;
   max-width: 100%;
   display: flex;
@@ -145,3 +145,5 @@
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+  

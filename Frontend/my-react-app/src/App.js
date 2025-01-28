@@ -35,12 +35,12 @@ function App() {
         <Routes>
         <Route path="/signup" element={!isLoggedIn ? <Signup /> : <Navigate to="/" />} />
           <Route path="/login" element={!isLoggedIn ? <Login  /> : <Navigate to="/" />} />
-          <Route path='/profile' element={<Votecenter  />} />
-          <Route path='/addCandidate' element={<AddCandidate  />} />
-          <Route path='/admin' element={<Admin  />} />
-          <Route path='/result' element={<Result  />} />
-        <Route path='/:id' element={<ManageCandiate  />} />
-        <Route path='/VoteSuccessfully/:id' element={<VoteSuccessfully />} />
+          <Route path='/profile' element={isLoggedIn ? <Votecenter /> : <Navigate to="/login" /> } />
+          <Route path='/addCandidate' element={isLoggedIn ? <AddCandidate /> : <Navigate to="/login" />} />
+          <Route path='/admin' element={isLoggedIn ? <Admin /> : <Navigate to="/login" />} />
+          <Route path='/result' element={isLoggedIn ? <Result /> : <Navigate to="/login" />} />
+          <Route path='/:id' element={isLoggedIn ? <ManageCandiate /> : <Navigate to="/login" />} />
+          <Route path='/VoteSuccessfully/:id' element={ isLoggedIn ? <VoteSuccessfully /> : <Navigate to="/login" />} />
           <Route path="/" element={isLoggedIn ? <Home  /> : <Navigate to="/login" />} />
           <Route path="*" element={<Navigate to={isLoggedIn ? (role === 'admin' ? "/admin" : "/")  : "/login"} />} />
        </Routes>

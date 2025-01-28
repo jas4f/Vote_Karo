@@ -167,7 +167,7 @@ router.get('/vote/:candidateID',jwtAuthMiddleware,async(req,res)=>{
           return res.status(404).json({ message: 'user not found' });
       }
       if (user.role == 'admin') {
-          return res.status(403).json({ message: 'admin is not allowed' });
+          return res.status(403).json({ message: 'admin is not allowed for vote.' });
       }
       if (user.isVoted) {
           return res.status(400).json({ message: 'You have already voted' });
@@ -180,7 +180,7 @@ router.get('/vote/:candidateID',jwtAuthMiddleware,async(req,res)=>{
     user.isVoted = true;
     await user.save();
 
-    res.status(200).json({message : 'Vote recodered successfully'});
+    res.status(200).json({message : 'Vote recorded successfully.'});
   } catch (error) {
     console.log(error);
     return res.status(500).json({error: 'internal Server error'});

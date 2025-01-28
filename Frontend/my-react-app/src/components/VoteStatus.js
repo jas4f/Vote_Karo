@@ -5,6 +5,7 @@ import style from './VoteStatus.module.css'
  const VoteSuccessfully = () => {
 
     const [result,setResult] = useState();
+    const [message,setMess] = useState();
      let param_data = useParams();
 useEffect(()=>{
     
@@ -21,9 +22,17 @@ useEffect(()=>{
                     'Authorization': `Bearer ${token}`
                 }
             })
+
+            
             const res = await Response.json();
-            const mess = res.message;
-            setResult(mess);
+            if (Response.ok) {
+                setResult(res.message)
+            }
+            else{
+                const mess = res.message;
+                setMess(mess);
+            }
+           
             console.log(res); 
 
 
@@ -39,8 +48,15 @@ useEffect(()=>{
     <>  
     <div className={style.container_result}>
               <div className={style.result}>
-                  <h2>thanks for Voting 😊</h2>
-                  <h3>Happy voting ❤️</h3>
+                <h4 className={style.mess}>{message}</h4>
+                  {/* <h2>thanks for Voting 😊</h2>
+                  <h3>Happy voting ❤️</h3> */}
+                  {result && (
+                      <div className={style.result}>
+                          <h4 className={style.mess}>{result}</h4>
+                          <h4 className={style.mess}>Happy Voting ❤️</h4>
+                  </div>
+                )}
               </div>
     </div> 
 

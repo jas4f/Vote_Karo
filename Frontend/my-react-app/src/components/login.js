@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import style from './signup.module.css';
 import { useEffect, useState } from 'react';
-
+import Image_logo from './Images/National-Emblem.jpg'
 const Login = ({setRole}) => {
 
     const [password, setPassword] = useState('');
@@ -64,6 +64,8 @@ const Login = ({setRole}) => {
     return (
 
     <div className={style.container_loginSignup}>
+    
+    
      <div className={style.loginSignup_component}>
                 <h2 className={style.logo}><span>Welcome to </span><span>Vote Karo</span><span><i class="fa-solid fa-check-to-slot"></i></span></h2>
         <div className={style.loginSignup_sub_component}>

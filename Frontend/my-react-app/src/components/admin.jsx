@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import style from './home.module.css';
 import { useState, useEffect } from "react";
 import Gif_loding from './Images/VAyR.gif';
+import Dialog from './Dialog'; // Import the Dialog component
 
 export const Admin = () => {
      const [res, setRes] = useState('');
@@ -80,7 +81,7 @@ export const Admin = () => {
     <>
           {Array.isArray(res) && res.length > 0 ? (
                         res.map((data, index) => (
-                           <div className={style.candidates_list} key={index}>
+                           <div className={style.candidates_list_admin} key={index}>
                               <h3>{data.name}</h3>
                               <h3>{data.party}</h3>
                               <h3>{data.age}</h3>
@@ -89,10 +90,10 @@ export const Admin = () => {
                                        onClick={() => openDialog('delete', data._id)}
                                        className={style.operate_button}
                                     >
-                                       Delete
+                                        <i class="fa-solid fa-trash"></i>
                                     </button>
                                     <Link to={"/" + data._id}>
-                                       <button className={style.operate_button}>Update</button>
+                                        <button className={style.operate_button}><i class="fa-regular fa-pen-to-square"></i></button>
                                     </Link>
                                
                               </div>
@@ -104,14 +105,19 @@ export const Admin = () => {
                         </h1>
                      )}
               <Link to='/addCandidate'>
-                  <div >
-                      <span >
-                          <i className="fa-solid fa-plus"></i>
-                      </span>
+              <div className={style.candidates_list_admin}>
                       <h2>Add Candidate Data</h2>
+                  <span >
+                      <i className="fa-solid fa-plus"></i>
+                  </span>
                   </div>
               </Link>
-        
+            <Dialog
+                isOpen={isDialogOpen}
+                onClose={closeDialog}
+                onConfirm={handleConfirm}
+                message={`Are you sure you want to ${actionType} this candidate?`}
+            />
     </>
   )
 };
